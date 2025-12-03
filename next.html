@@ -363,6 +363,9 @@ a:focus {
     height: 20px;
     background-color: #ffbe33;
 }
+.carousel.carousel-fade .carousel-item {
+  transition: opacity 0.8s ease-in-out;
+}
 
 .offer_section {
     position: relative;
@@ -1174,6 +1177,7 @@ a:focus {
         <div class="bg-box">
             <!-- Placeholder for background image -->
             <img src="images/images (1)-Photoroom.png" alt="Outdoor advertising billboard background">
+
         </div>
         <!-- header section starts -->
         <header class="header_section">
@@ -1255,16 +1259,16 @@ a:focus {
 
         <!-- slider section -->
         <section class="slider_section ">
-            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel"  data-interval="3000"data-pause="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="container ">
                             <div class="row">
                                 <div class="col-md-7 col-lg-6 ">
                                     <div class="detail-box">
-                                        <h1>
+                                        <h2>
                                             Outdoor Advertising
-                                        </h1>
+                                        </h2>
                                         <p>
                                             Grab attention across cities with high-impact billboards, pole kiosks, and
                                             innovative outdoor solutions tailored for maximum visibility.
@@ -1284,9 +1288,9 @@ a:focus {
                             <div class="row">
                                 <div class="col-md-7 col-lg-6 ">
                                     <div class="detail-box">
-                                        <h1>
+                                        <h2>
                                             Indoor Branding Solutions
-                                        </h1>
+                                        </h2>
                                         <p>
                                             From stunning wall wraps and flex pasting to vibrant interior signage, we
                                             transform spaces into brand experiences.
@@ -1306,9 +1310,9 @@ a:focus {
                             <div class="row">
                                 <div class="col-md-7 col-lg-6 ">
                                     <div class="detail-box">
-                                        <h1>
+                                        <h2>
                                             Vehicle &amp; Event Graphics
-                                        </h1>
+                                        </h2>
                                         <p>
                                             Mobilize your brand with striking vehicle wraps and professional arch/event
                                             setup work for unparalleled marketing reach.
@@ -1513,7 +1517,7 @@ a:focus {
     const nums = section.querySelectorAll('.num');
     nums.forEach(el => {
       const target = parseInt(el.getAttribute('data-count')) || 0;
-      animate(el, target, 6000);  // ⭐ 5 SECONDS COUNTING
+      animate(el, target, 12000);  // ⭐ 5 SECONDS COUNTING
     });
   }, 3000); // delay before starting (optional)
 })();
@@ -1609,262 +1613,479 @@ a:focus {
 
 
    
-    <!-- services section -->
-    <section class="food_section layout_padding" id="services">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Our Advertising Solutions
-                </h2>
-            </div>
+  <!-- services section -->
+<section class="food_section layout_padding" id="services">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Our Advertising Solutions</h2>
+    </div>
 
-            <!-- Filters Menu (functional via custom.js/isotope) -->
-            <ul class="filters_menu">
-                <li class="active" data-filter="*">All</li>
-                <li data-filter=".outdoor">Outdoor</li>
-                <li data-filter=".indoor">Indoor</li>
-                <li data-filter=".vehicle">Vehicle</li>
-                <li data-filter=".event">Event</li>
-            </ul>
+    <!-- Filters Menu (functional via isotope) -->
+    <ul class="filters_menu">
+      <li class="active" data-filter="*">All</li>
+      <li data-filter=".outdoor">Outdoor</li>
+      <li data-filter=".indoor">Indoor</li>
+      <li data-filter=".vehicle">Vehicle</li>
+      <li data-filter=".event">Event</li>
+    </ul>
 
-            <div class="filters-content">
-                <div class="row grid">
+    <div class="filters-content">
+      <div class="row grid">
 
-                    <!-- Service Item 1: Indoor Wall Flex Pasting -->
-                    <div class="col-sm-6 col-lg-4 all indoor">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/flex-wallpaper.jpg">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Indoor Wall Flex Pasting
-                                    </h5>
-                                    <p>
-                                        All Types Of Indoor Advertising — Wall flex printing, pasting, and professional
-                                        finishing.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Item 2: Lighting Board -->
-                    <div class="col-sm-6 col-lg-4 all outdoor">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/lighting board.webp" alt="Lighting Board">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Lighting Board
-                                    </h5>
-                                    <p>
-                                        All Types Of Lighting Boards — LED fixing, channel letters, and high-visibility
-                                        backlit options.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Item 3: Reflecting Sticker Works -->
-                    <div class="col-sm-6 col-lg-4 all outdoor vehicle">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/war.png" alt="Reflecting Sticker Works">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Reflecting Sticker Works
-                                    </h5>
-                                    <p>
-                                        Retro-reflective vinyl, high-visibility signage stickers, and safety graphics
-                                        for roads and vehicles.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Item 4: Sun Pack Sheet -->
-                    <div class="col-sm-6 col-lg-4 all event">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/choose.png" alt="Sun Pack Sheet">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Sun Pack Sheet
-                                    </h5>
-                                    <p>
-                                        All Sizes With Fixing Work — durable sunpack sheets for temporary signage,
-                                        protection, and political campaigns.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Item 5: Foam board with Vinyl -->
-                    <div class="col-sm-6 col-lg-4 all indoor">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/Foam board with Vinyl.jpg" alt="Foam board with Vinyl">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Foam board with Vinyl
-                                    </h5>
-                                    <p>
-                                        Premium indoor signage—foam board printing with high-quality vinyl lamination
-                                        and finishing.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Item 6: Arch work -->
-                    <div class="col-sm-6 col-lg-4 all event outdoor">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/event arch.png" alt="Arch work">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Arch work / Event Gates
-                                    </h5>
-                                    <p>
-                                        All Types Of Arch Work — decorative arches, structural event setup, and
-                                        installation for public events.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Item 7: Vehicle Branding -->
-                    <div class="col-sm-6 col-lg-4 all vehicle">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/vechical branding.jpg" alt="Vehicle Branding">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Vehicle Branding
-                                    </h5>
-                                    <p>
-                                        High-durability Vinyl Sticker modifications — car, van, truck, and bus
-                                        full/partial wrapping services.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Item 6: Arch work -->
-                    <div class="col-sm-6 col-lg-4 all event outdoor">
-                        <div class="box">
-                            <div>
-                                <div class="img-box">
-                                    <img src="images/photo frame.png" alt="Arch work">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        Custom Digital Photo Frames
-                                    </h5>
-                                    <p>
-                                        All photo printing, framing, and mounting works — choose from various frame
-                                        materials like wood, metal, or acrylic, available in custom sizes and finishes
-                                        for events or home decor.
-                                    </p>
-                                    <div class="options">
-                                        <h6>
-
-                                        </h6>
-                                        <a href="#contact">
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Service Item 1: Indoor Wall Flex Pasting -->
+        <div class="col-sm-6 col-lg-4 all indoor">
+          <div class="box service-card"
+               data-title="Indoor Wall Flex Pasting"
+               data-img="images/flex-wallpaper.jpg"
+               data-details="We handle indoor wall flex printing, pasting, and finishing with bubble-free installation, accurate measurements, and long-lasting colours. Ideal for showrooms, offices, retail spaces, and branding walls.">
+            <div>
+              <div class="img-box">
+                <img src="images/flex-wallpaper.jpg" alt="Indoor Wall Flex Pasting">
+              </div>
+              <div class="detail-box">
+                <h5>Indoor Wall Flex Pasting</h5>
+                <p>
+                  All Types Of Indoor Advertising — Wall flex printing, pasting, and professional finishing.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <!-- contact button – இந்ததை click பண்ணா normal contactக்கு போகும் -->
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
                 </div>
+              </div>
             </div>
-            <!-- End Food/Services Grid -->
-
-            <div class="btn-box">
-                <a href="#contact">
-                    View More Services
-                </a>
-            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Service Item 2: Lighting Board -->
+        <div class="col-sm-6 col-lg-4 all outdoor">
+          <div class="box service-card"
+               data-title="Lighting Board"
+               data-img="images/lighting board.webp"
+               data-details="We design and fix all types of lighting boards – LED, backlit, glow sign, and channel letter boards. Weather-proof materials and bright illumination ensure high visibility day and night.">
+            <div>
+              <div class="img-box">
+                <img src="images/lighting board.webp" alt="Lighting Board">
+              </div>
+              <div class="detail-box">
+                <h5>Lighting Board</h5>
+                <p>
+                  All Types Of Lighting Boards — LED fixing, channel letters, and high-visibility backlit options.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Item 3: Reflecting Sticker Works -->
+        <div class="col-sm-6 col-lg-4 all outdoor vehicle">
+          <div class="box service-card"
+               data-title="Reflecting Sticker Works"
+               data-img="images/war.png"
+               data-details="Retro-reflective vinyl and safety stickers suitable for highways, signage, vehicles, and warning boards. High reflection under headlights for better safety and branding at night.">
+            <div>
+              <div class="img-box">
+                <img src="images/war.png" alt="Reflecting Sticker Works">
+              </div>
+              <div class="detail-box">
+                <h5>Reflecting Sticker Works</h5>
+                <p>
+                  Retro-reflective vinyl, high-visibility signage stickers, and safety graphics for roads and vehicles.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Item 4: Sun Pack Sheet -->
+        <div class="col-sm-6 col-lg-4 all event">
+          <div class="box service-card"
+               data-title="Sun Pack Sheet"
+               data-img="images/choose.png"
+               data-details="Durable sunpack sheets in multiple thicknesses with printing and fixing work. Ideal for political campaigns, real estate boards, temporary displays, and outdoor announcements.">
+            <div>
+              <div class="img-box">
+                <img src="images/choose.png" alt="Sun Pack Sheet">
+              </div>
+              <div class="detail-box">
+                <h5>Sun Pack Sheet</h5>
+                <p>
+                  All Sizes With Fixing Work — durable sunpack sheets for temporary signage, protection, and political campaigns.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Item 5: Foam board with Vinyl -->
+        <div class="col-sm-6 col-lg-4 all indoor">
+          <div class="box service-card"
+               data-title="Foam Board with Vinyl"
+               data-img="images/Foam board with Vinyl.jpg"
+               data-details="Premium foam board printing with vinyl lamination for neat, rigid indoor display boards. Perfect for reception boards, offers display, and product information panels.">
+            <div>
+              <div class="img-box">
+                <img src="images/Foam board with Vinyl.jpg" alt="Foam board with Vinyl">
+              </div>
+              <div class="detail-box">
+                <h5>Foam board with Vinyl</h5>
+                <p>
+                  Premium indoor signage—foam board printing with high-quality vinyl lamination and finishing.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Item 6: Arch work -->
+        <div class="col-sm-6 col-lg-4 all event outdoor">
+          <div class="box service-card"
+               data-title="Arch Work / Event Gates"
+               data-img="images/event arch.png"
+               data-details="Custom-designed arches and event gates for openings, launches, and functions. Includes frame structure, flex printing, installation, and dismantling support.">
+            <div>
+              <div class="img-box">
+                <img src="images/event arch.png" alt="Arch work">
+              </div>
+              <div class="detail-box">
+                <h5>Arch work / Event Gates</h5>
+                <p>
+                  All Types Of Arch Work — decorative arches, structural event setup, and installation for public events.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Item 7: Vehicle Branding -->
+        <div class="col-sm-6 col-lg-4 all vehicle">
+          <div class="box service-card"
+               data-title="Vehicle Branding"
+               data-img="images/vechical branding.jpg"
+               data-details="Full and partial wraps for cars, vans, trucks, and buses using durable vinyl. Precise cutting, panel alignment, and branding layouts for maximum visibility on the move.">
+            <div>
+              <div class="img-box">
+                <img src="images/vechical branding.jpg" alt="Vehicle Branding">
+              </div>
+              <div class="detail-box">
+                <h5>Vehicle Branding</h5>
+                <p>
+                  High-durability Vinyl Sticker modifications — car, van, truck, and bus full/partial wrapping services.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Item 8: Custom Digital Photo Frames -->
+        <div class="col-sm-6 col-lg-4 all event outdoor">
+          <div class="box service-card"
+               data-title="Custom Digital Photo Frames"
+               data-img="images/photo frame.png"
+               data-details="Photo printing, framing, and mounting works for home, office, and events. Multiple frame materials – wood, metal, acrylic – with custom sizes and premium finishing.">
+            <div>
+              <div class="img-box">
+                <img src="images/photo frame.png" alt="Custom Digital Photo Frames">
+              </div>
+              <div class="detail-box">
+                <h5>Custom Digital Photo Frames</h5>
+                <p>
+                  All photo printing, framing, and mounting works — various frame materials with custom sizes and finishes.
+                </p>
+                <div class="options">
+                  <h6></h6>
+                  <a href="#contact" class="contact-link">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    </div><!-- /.filters-content -->
+
+    <div class="btn-box">
+      <a href="#contact">
+        View More Services
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 🔍 SERVICE DETAIL MODAL (same page small interface) -->
+<div class="service-modal-backdrop" id="serviceModal">
+  <div class="service-modal">
+    <button class="service-modal-close" type="button" aria-label="Close">
+      &times;
+    </button>
+    <div class="service-modal-inner">
+      <div class="service-modal-img">
+        <img id="serviceModalImg" src="" alt="">
+      </div>
+      <div class="service-modal-content">
+        <h3 id="serviceModalTitle"></h3>
+        <p id="serviceModalText"></p>
+
+        <a href="#contact" class="service-modal-cta">
+          Enquire About This Service
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ===== Service Modal Styles (Updated Bold Heading) ===== */
+.service-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.58);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease-out;
+}
+
+
+.service-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.service-modal {
+  background: #222831;
+  color: #fff;
+  border-radius: 14px;
+  max-width: 860px;
+  width: 95%;
+  transform: translateY(20px) scale(.96);
+  opacity: 0;
+  transition: transform .25s ease-out, opacity .25s ease-out;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+
+.service-modal-backdrop.active .service-modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.service-modal-close {
+   position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.95); /* light circle behind X so it's visible on any image */
+  color: #000;                         /* black X as you asked */
+  font-size: 22px;
+  line-height: 44px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99999;                      /* very high so it's always above image */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform .12s ease;
+}
+
+.service-modal-inner {
+  display: flex;
+  gap: 18px;
+  padding: 20px 22px 22px;
+  flex-wrap: wrap;
+}
+
+.service-modal-img {
+  flex: 0 0 260px;
+  max-width: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service-modal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 👉 UPDATED: BOLDER HEADING */
+.service-modal-content h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffbe33;
+  letter-spacing: .3px;
+}
+
+.service-modal-content p {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  color: #eee;
+}
+
+.service-modal-cta {
+  display: inline-block;
+  padding: 9px 26px;
+  border-radius: 999px;
+  background: #ffbe33;
+  color: #222831;
+  font-weight: 700;
+}
+
+.service-modal-cta:hover {
+  background: #e69c00;
+}
+
+@media (max-width: 575px) {
+  .service-modal-inner {
+    flex-direction: column;
+  }
+  .service-modal-img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .service-modal-close {
+    top: 10px;
+    right: 10px;
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+    line-height: 56px;
+  }
+}
+
+/* make sure modal image stays behind the close button */
+.service-modal-img,
+.service-modal-img img {
+  position: relative;
+  z-index: 1;
+}
+
+/* ensure the modal container is above backdrop but below close (close has higher z) */
+.service-modal {
+  position: relative;
+  z-index: 9999;
+}
+</style>
+<script>
+(function(){
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const modalBackdrop = document.getElementById('serviceModal'); // wrapper .service-modal-backdrop
+  const modalImg     = document.getElementById('serviceModalImg');
+  const modalTitle   = document.getElementById('serviceModalTitle');
+  const modalText    = document.getElementById('serviceModalText');
+  const closeBtn     = modalBackdrop.querySelector('.service-modal-close');
+
+  let hoverTimer = null;
+
+  function openModal(card) {
+    const title   = card.dataset.title || (card.querySelector('h5') && card.querySelector('h5').textContent) || 'Service';
+    const img     = card.dataset.img || (card.querySelector('img') && card.querySelector('img').src) || '';
+    const details = card.dataset.details || (card.querySelector('.detail-box p') && card.querySelector('.detail-box p').textContent) || '';
+
+    modalTitle.textContent = title;
+    modalImg.src = img;
+    modalText.textContent = details;
+
+    modalBackdrop.classList.add("active");
+    // Prevent page scroll while modal open (optional)
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modalBackdrop.classList.remove("active");
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  }
+
+  // Close only via the X button. (do NOT close on backdrop click)
+  closeBtn.addEventListener("click", closeModal);
+
+  // Also allow ESC key to close (optional convenience)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalBackdrop.classList.contains("active")) {
+      closeModal();
+    }
+  });
+
+  // MOBILE: open on click, close only by X (no backdrop click)
+  if (isMobile) {
+    document.addEventListener("click", function(e){
+      const card = e.target.closest(".service-card");
+      if (!card) return;
+      openModal(card);
+    });
+    return;
+  }
+
+  // DESKTOP: open on hover — but DO NOT auto-close on mouseleave
+  document.querySelectorAll(".service-card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      // small delay so accidental mouse pass-overs don't open modal
+      hoverTimer = setTimeout(() => openModal(card), 140);
+    });
+
+    card.addEventListener("mouseleave", () => {
+      // IMPORTANT: we intentionally DO NOT call closeModal() here.
+      // clear just the pending open timer (so it won't open after quick leave)
+      if (hoverTimer) {
+        clearTimeout(hoverTimer);
+        hoverTimer = null;
+      }
+    });
+  });
+
+})();
+</script>
+
+
     <!-- end food section -->
 
     <!-- about section -->
@@ -1898,6 +2119,143 @@ a:focus {
         </div>
     </div>
 </section>
+
+<!-- Services card entrance animation: paste before closing </body> -->
+<!-- Replace your previous services animation style+script with this block (paste before </body>) -->
+<style>
+/* Slower, smoother entrance for services cards */
+.services-animate {
+  opacity: 0;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* initial directions */
+.services-animate.from-left  { transform: translateX(-36px) translateZ(0) scale(.995); }
+.services-animate.from-right { transform: translateX(36px) translateZ(0) scale(.995); }
+.services-animate.from-top   { transform: translateY(-28px) translateZ(0) scale(.995); }
+.services-animate.from-bottom{ transform: translateY(28px) translateZ(0) scale(.995); }
+
+/* mobile alternate */
+.services-animate.alt-left  { transform: translateX(-28px) translateZ(0); }
+.services-animate.alt-right { transform: translateX(28px) translateZ(0); }
+
+/* VISIBLE: SLOWER transitions and smoother easing */
+.services-animate.in-view {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+  transition:
+    transform 1200ms cubic-bezier(.16,.8,.24,1),
+    opacity 900ms ease-out;
+}
+
+/* Hover polish remains quick */
+.services-animate.in-view .box { transition: transform .18s ease, box-shadow .18s ease; }
+.services-animate.in-view:hover .box { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(0,0,0,.12); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .services-animate,
+  .services-animate.in-view {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 575px) {
+  .services-animate.from-left,
+  .services-animate.from-right,
+  .services-animate.from-top,
+  .services-animate.from-bottom {
+    transform: none;
+    opacity: 0;
+  }
+}
+</style>
+
+<script>
+(function(){
+  // Select columns/cards — adjust selector if your structure differs
+  const cols = Array.from(document.querySelectorAll('.filters-content .all')) ||
+               Array.from(document.querySelectorAll('.filters-content .box')) ||
+               [];
+
+  const elements = cols.length ? cols : Array.from(document.querySelectorAll('.filters-content .box'));
+
+  if (!elements.length) return;
+
+  function getPosRatio(el){
+    const cont = el.closest('.filters-content') || el.parentElement || document.body;
+    const contRect = cont.getBoundingClientRect();
+    const elRect = el.getBoundingClientRect();
+    const elCenter = elRect.left + elRect.width/2;
+    const ratio = (elCenter - contRect.left) / contRect.width;
+    return Math.max(0, Math.min(1, ratio));
+  }
+
+  // Apply base classes + larger stagger delays for slower feel
+  elements.forEach((el, i) => {
+    el.classList.add('services-animate');
+    const ratio = getPosRatio(el);
+
+    if (window.matchMedia('(max-width:575px)').matches) {
+      // mobile handled later
+    } else {
+      if (ratio < 0.34) el.classList.add('from-left');
+      else if (ratio > 0.66) el.classList.add('from-right');
+      else el.classList.add('from-top');
+    }
+
+    // Bigger stagger for slower cascade
+    const delay = (i % 6) * 140; // previously smaller; increased to 140ms
+    el.style.transitionDelay = `${delay}ms`;
+  });
+
+  // Mobile alternation (left/right) with slower stagger
+  function applyMobileAlternation() {
+    elements.forEach((el, i) => {
+      el.classList.remove('from-left','from-right','from-top','from-bottom','alt-left','alt-right');
+      if (window.matchMedia('(max-width:575px)').matches) {
+        if (i % 2 === 0) el.classList.add('alt-left');
+        else el.classList.add('alt-right');
+        el.style.transitionDelay = `${(i%6)*120}ms`; // slight slower stagger on mobile
+      } else {
+        const ratio = getPosRatio(el);
+        if (ratio < 0.34) el.classList.add('from-left');
+        else if (ratio > 0.66) el.classList.add('from-right');
+        else el.classList.add('from-top');
+        el.style.transitionDelay = `${(i%6)*140}ms`;
+      }
+    });
+  }
+
+  applyMobileAlternation();
+
+  let rTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(rTimer);
+    rTimer = setTimeout(applyMobileAlternation, 160);
+  });
+
+  // IntersectionObserver: lower threshold so animation triggers more gently
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('in-view');
+        // keep observing so it animates again if scrolled out/in
+      } else {
+        el.classList.remove('in-view');
+      }
+    });
+  }, { root: null, rootMargin: '0px', threshold: 0.14 }); // slightly smaller threshold
+
+  elements.forEach(el => io.observe(el));
+})();
+</script>
+
 
 
 
@@ -2214,7 +2572,7 @@ function handleSend(e) {
     </footer>
 
 
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/916379064417" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
